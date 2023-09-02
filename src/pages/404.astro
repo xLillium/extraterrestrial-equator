@@ -1,0 +1,56 @@
+---
+import Layout from "../layouts/pages.astro";
+import { Image } from "astro:assets";
+import PageNotFoundImg from "../images/404.png";
+---
+
+<Layout>
+    <div class="not-found">
+        <h1>Oops! Pikachu used 'Flash'.</h1>
+        <Image src={PageNotFoundImg} alt="A confused Pikachu in a dark room" />
+        <p>We can't seem to find the page you're looking for.</p>
+        <a href="/" class="home-link">&larr; Light the way back home</a>
+    </div>
+</Layout>
+
+<style>
+    .not-found {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 2rem 0;
+        text-align: center;
+    }
+
+    .not-found h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .not-found img {
+        display: block;
+        margin: 2rem auto;
+        width: 100%; /* or adjust as needed */
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .not-found img:hover {
+        transform: scale(1.05); /* subtle zoom effect on hover */
+    }
+
+    .not-found p {
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .home-link {
+        font-size: 1.2rem;
+        color: #ffcb05; /* Pokémon yellow or your theme color */
+        border-bottom: 2px dashed #ffcb05;
+        transition: border-bottom 0.3s ease-in-out;
+    }
+
+    .home-link:hover {
+        border-bottom: 2px solid #ffcb05; /* makes the link underline solid on hover */
+    }
+</style>
