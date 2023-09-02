@@ -1,10 +1,13 @@
 ---
-layout: '../layouts/default.astro'
+layout: '../layouts/pages.astro'
 ---
+import { Image } from 'astro:assets';
+import teamImg from "../images/team.png";
+
 
 <p align="center">
   <img src="/pokeball.svg" alt="Poke Adoption Center Logo" width="100"/>
-  <br>
+  <br/>
   <strong>About us</strong>
 </p>
 
@@ -37,8 +40,9 @@ To bridge the world of fantasy with reality, providing joy, companionship, and a
 ---
 
 ## Meet the Team 🌍
-
-![Team Photo](../images/team.png)
+<p align="center">
+  <img src={teamImg.src} alt="Our awesome team" class="team-image"/>
+</p>
 
 We're a diverse team of scientists, Pokémon enthusiasts, and dreamers. Together, we're committed to making your Pokémon dreams come true.
 

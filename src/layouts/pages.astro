@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/default.astro";
+---
+
+<Layout>
+    <section class="block page">
+        <slot />
+    </section>
+</Layout>
+
+<style is:global>
+    .team-image {
+        max-width: 80vw; /* Set the maximum width relative to the viewport width */
+    }
+
+    @media (min-width: 1000px) {
+        /* This breakpoint ensures that 80% of the viewport is 800px */
+        .team-image {
+            max-width: 800px; /* Set the maximum width to 800px for viewports wider than 1000px */
+        }
+    }
+</style>
