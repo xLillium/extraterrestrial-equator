@@ -38,7 +38,7 @@ To bridge the world of fantasy with reality, providing joy, companionship, and a
 
 ## Meet the Team 🌍
 
-![Team Photo](/team.png)
+![Team Photo](../images/team.png)
 
 We're a diverse team of scientists, Pokémon enthusiasts, and dreamers. Together, we're committed to making your Pokémon dreams come true.
 
