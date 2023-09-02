@@ -3,6 +3,10 @@
 		<meta charset="utf-8" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.cdnfonts.com/css/pokemon-solid"
+			rel="stylesheet"
+		/>
 		<link rel="icon" type="image/svg+xml" href="/pokeball.svg" />
 
 		<link
@@ -16,21 +20,28 @@
 	</head>
 	<body>
 		<header>
-			<a href="/" rel="home">
-			    home	
-			</a>
+			<a href="/" rel="home"> home</a>
 
 			<!-- TODO: add nav -->
 		</header>
 
-        <slot />
-        
+		<slot />
+
 		<footer>
 			<p>
 				<a href="https://github.com/xLillium/extraterrestrial-equator">
-                    source code
-                </a>
+					source code
+				</a>
 			</p>
 		</footer>
 	</body>
 </html>
+
+<style is:global>
+	:is(h1, h2, h3, h4, h5, h6) {
+		font-family: "Pokemon Solid", cursive;
+		font-weight: 700;
+		line-height: 1.1;
+		margin: 1.5rem 0 0;
+	}
+</style>
