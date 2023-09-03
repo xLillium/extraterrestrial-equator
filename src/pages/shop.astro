@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/default.astro";
+import PokemonItems from "../components/shop-items.astro";
+---
+
+<Layout>
+    <div class="shop">
+        <h1>Pokemon Shop</h1>
+
+        <noscript>
+            <p>
+                JavaScript is required to purchase a Pokemon from our shop. If
+                you want to purchase without enabling JavaScript just send us an
+                email.
+            </p>
+        </noscript>
+
+        <div class="products">
+            <PokemonItems />
+
+            <p>shopping cart</p>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .shop {
+        padding: 3rem 5%;
+    }
+
+    .products {
+        align-items: flex-start;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr 260px;
+        position: relative;
+    }
+</style>

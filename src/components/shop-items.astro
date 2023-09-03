@@ -1,0 +1,62 @@
+---
+function formatCurrency(amount: number) {
+    return new Intl.NumberFormat("fr-FR", {
+        currency: "eur",
+        style: "currency",
+    }).format(amount);
+}
+
+const result = await fetch("https://api-pokemon-fr.vercel.app/api/v1/gen/1");
+
+if (!result.ok) {
+    console.error(result);
+}
+
+const pokemonItems: PokemonItem[] = await result.json();
+---
+
+<section class="shop-items">
+    {
+        pokemonItems.map((item) => {
+            return (
+                <div class="item">
+                    <img src={item.sprites.regular} alt={item.name.en} />
+                    <h2>{item.name.en}</h2>
+                    <p>{item.category}</p>
+                    <p class="price">{formatCurrency(item.catch_rate)}</p>
+                    <p>TODO: add to cart button</p>
+                </div>
+            );
+        })
+    }
+</section>
+
+<style>
+    .shop-items {
+        display: flex;
+        gap: 3rem 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+
+    .item {
+        width: 250px;
+    }
+
+    .item img {
+        aspect-ratio: 1;
+        border-radius: 0.125rem;
+        display: block;
+        width: 100%;
+    }
+
+    .item h2 {
+        font-size: 1.125rem;
+        margin: 0.75rem 0 0;
+    }
+
+    .item p {
+        margin: 0.25rem 0 0;
+    }
+</style>
